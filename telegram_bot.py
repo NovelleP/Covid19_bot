@@ -66,6 +66,7 @@ def make_chart(days_dict, country, type):
     plt.savefig(img_path)
     return img_path
 
+
 def chart_confirmed(update: Update, context: CallbackContext):
     logger.info('chartConfirmed command received')
     countries = context.args if context.args else ['spain']
@@ -76,25 +77,6 @@ def chart_confirmed(update: Update, context: CallbackContext):
             if not days_dict:
                 raise Exception('Empty json')
             img_path = make_chart(days_dict, country, 'confirmed')
-            context.bot.send_photo(
-                chat_id=update.message.chat_id,
-                photo=open(img_path, 'rb')
-            )
-            plt.close()
-        except:
-            logger.exception(f'covid19 command fail for country: {country}')
-
-
-def chart_recovered(update: Update, context: CallbackContext):
-    logger.info('chartRecovered command received')
-    countries = context.args if context.args else ['spain']
-    for country in countries:
-        try:
-            resp = get(f'https://api.covid19api.com/dayone/country/{country}/status/recovered')
-            days_dict = resp.json()
-            if not days_dict:
-                raise Exception('Empty json')
-            img_path = make_chart(days_dict, country, 'recovered')
             context.bot.send_photo(
                 chat_id=update.message.chat_id,
                 photo=open(img_path, 'rb')
@@ -123,13 +105,32 @@ def chart_deaths(update: Update, context: CallbackContext):
             logger.exception(f'covid19 command fail for country: {country}')
 
 
+def chart_recovered(update: Update, context: CallbackContext):
+    logger.info('chartRecovered command received')
+    countries = context.args if context.args else ['spain']
+    for country in countries:
+        try:
+            resp = get(f'https://api.covid19api.com/dayone/country/{country}/status/recovered')
+            days_dict = resp.json()
+            if not days_dict:
+                raise Exception('Empty json')
+            img_path = make_chart(days_dict, country, 'recovered')
+            context.bot.send_photo(
+                chat_id=update.message.chat_id,
+                photo=open(img_path, 'rb')
+            )
+            plt.close()
+        except:
+            logger.exception(f'covid19 command fail for country: {country}')
+
+
 if __name__ == '__main__':
     updater = Updater(token=config_dict['token'], use_context=True)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start))
     dispatcher.add_handler(CommandHandler('covid19', covid19))
     dispatcher.add_handler(CommandHandler('chartConfirmed', chart_confirmed))
-    dispatcher.add_handler(CommandHandler('chartRecovered', chart_recovered))
     dispatcher.add_handler(CommandHandler('chartDeaths', chart_deaths))
+    dispatcher.add_handler(CommandHandler('chartRecovered', chart_recovered))
     updater.start_polling()
     updater.idle()
