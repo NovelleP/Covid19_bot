@@ -21,7 +21,7 @@ def start(update: Update, context: CallbackContext):
            '\t/chart country1 country2 ...\n' \
            '\t/chartConfirmed country1 country2 ...\n'\
            '\t/chartDeaths country1 country2 ...\n' \
-           '\t/chartRecovered country1 country2 ...\n' \\
+           '\t/chartRecovered country1 country2 ...\n' \
            '\n*Functionality:*\n' \
            '_start_: displays this information message.\n' \
            '\n_covid19_: shows information of the selected countries (Confirmed, Recovered, Deaths). One message per country. Spain is a default country.\n' \
