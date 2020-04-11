@@ -22,7 +22,10 @@ def start(update: Update, context: CallbackContext):
            '\n*Functionality:*\n' \
            '_start_: displays this information message.\n' \
            '\n_covid19_: shows information of the selected countries (Confirmed, Recovered, Deaths). One message per country. Spain is a default country.\n' \
-           '\n_chart_: Shows a bar graph with the new cases per day (during the last 30 days). One message per country. Spain is a default country.\n' \
+           '\n_chart_: Shows a bar graph with the confirmed, deaths and recovered cases per day (during the last 30 days). One message per country. Spain is a default country.\n' \
+           '\n_chartConfirmed_: Shows a bar graph with the new cases per day (during the last 30 days). One message per country. Spain is a default country.\n' \
+           '\n_chartDeaths_: Shows a bar graph with the new deaths per day (during the last 30 days). One message per country. Spain is a default country.\n' \
+           '\n_chartRecovered_: Shows a bar graph with the new recovered cases per day (during the last 30 days). One message per country. Spain is a default country.\n' \
            '\nthis bot get information from this [API](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest)' \
            '\n[My GitHub Account](https://github.com/NovelleP)'
     context.bot.send_message(
