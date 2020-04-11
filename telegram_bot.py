@@ -37,11 +37,11 @@ def covid19(update: Update, context: CallbackContext):
     countries = context.args if context.args else ['spain']
     for country in countries:
         try:
-            resp_confirmeds = get(f'https://api.covid19api.com/country/{country}/status/confirmed/live')
+            resp_confirmeds = get(f'https://total/api.covid19api.com/country/{country}/status/confirmed')
             last_confirmeds = resp_confirmeds.json()[-1]
-            resp_recovereds = get(f'https://api.covid19api.com/country/{country}/status/recovered/live')
+            resp_recovereds = get(f'https://total/api.covid19api.com/country/{country}/status/recovered')
             last_recovereds = resp_recovereds.json()[-1]
-            resp_deaths = get(f'https://api.covid19api.com/country/{country}/status/deaths/live')
+            resp_deaths = get(f'https://total/api.covid19api.com/country/{country}/status/deaths')
             last_deaths = resp_deaths.json()[-1]
             context.bot.send_message(
                 chat_id=update.message.chat_id,
@@ -72,7 +72,7 @@ def chart_confirmed(update: Update, context: CallbackContext):
     countries = context.args if context.args else ['spain']
     for country in countries:
         try:
-            resp = get(f'https://api.covid19api.com/dayone/country/{country}/status/confirmed')
+            resp = get(f'https://api.covid19api.com/total/dayone/country/{country}/status/confirmed')
             days_dict = resp.json()
             if not days_dict:
                 raise Exception('Empty json')
@@ -91,7 +91,7 @@ def chart_deaths(update: Update, context: CallbackContext):
     countries = context.args if context.args else ['spain']
     for country in countries:
         try:
-            resp = get(f'https://api.covid19api.com/dayone/country/{country}/status/deaths')
+            resp = get(f'https://api.covid19api.com/total/dayone/country/{country}/status/deaths')
             days_dict = resp.json()
             if not days_dict:
                 raise Exception('Empty json')
@@ -110,7 +110,7 @@ def chart_recovered(update: Update, context: CallbackContext):
     countries = context.args if context.args else ['spain']
     for country in countries:
         try:
-            resp = get(f'https://api.covid19api.com/dayone/country/{country}/status/recovered')
+            resp = get(f'https://api.covid19api.com/total/dayone/country/{country}/status/recovered')
             days_dict = resp.json()
             if not days_dict:
                 raise Exception('Empty json')
