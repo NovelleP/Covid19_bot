@@ -37,11 +37,11 @@ def covid19(update: Update, context: CallbackContext):
     countries = context.args if context.args else ['spain']
     for country in countries:
         try:
-            resp_confirmeds = get(f'https://total/api.covid19api.com/country/{country}/status/confirmed')
+            resp_confirmeds = get(f'https://api.covid19api.com/total/country/{country}/status/confirmed')
             last_confirmeds = resp_confirmeds.json()[-1]
-            resp_recovereds = get(f'https://total/api.covid19api.com/country/{country}/status/recovered')
+            resp_recovereds = get(f'https://api.covid19api.com/total/country/{country}/status/recovered')
             last_recovereds = resp_recovereds.json()[-1]
-            resp_deaths = get(f'https://total/api.covid19api.com/country/{country}/status/deaths')
+            resp_deaths = get(f'https://api.covid19api.com/total/country/{country}/status/deaths')
             last_deaths = resp_deaths.json()[-1]
             context.bot.send_message(
                 chat_id=update.message.chat_id,
