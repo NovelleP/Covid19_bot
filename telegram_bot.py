@@ -105,7 +105,7 @@ def chart(update: Update, context: CallbackContext):
             )
             plt.close()
         except:
-            logger.exception(f'covid19 command fail for country: {country}')
+            logger.exception(f'chart command fail for country: {country}')
 
 
 def make_barchart(days_dict, country, type):
@@ -141,7 +141,7 @@ def chart_confirmed(update: Update, context: CallbackContext):
             )
             plt.close()
         except:
-            logger.exception(f'covid19 command fail for country: {country}')
+            logger.exception(f'chartConfirmed command fail for country: {country}')
 
 
 def chart_deaths(update: Update, context: CallbackContext):
@@ -162,7 +162,7 @@ def chart_deaths(update: Update, context: CallbackContext):
             )
             plt.close()
         except:
-            logger.exception(f'covid19 command fail for country: {country}')
+            logger.exception(f'chartDeaths command fail for country: {country}')
 
 
 def chart_recovered(update: Update, context: CallbackContext):
@@ -183,7 +183,7 @@ def chart_recovered(update: Update, context: CallbackContext):
             )
             plt.close()
         except:
-            logger.exception(f'covid19 command fail for country: {country}')
+            logger.exception(f'chartRecovered command fail for country: {country}')
 
 
 if __name__ == '__main__':

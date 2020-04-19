@@ -1,0 +1,86 @@
+2020-04-11 20:43:56,016 - Covid19 Bot - INFO - start command received
+2020-04-11 20:43:56,101 - Covid19 Bot - INFO - start command received
+2020-04-11 20:44:07,087 - Covid19 Bot - INFO - chartConfirmed command received
+2020-04-11 20:44:11,180 - Covid19 Bot - INFO - chartDeaths command received
+2020-04-11 20:44:14,616 - Covid19 Bot - INFO - chartRecovered command received
+2020-04-11 20:44:35,577 - Covid19 Bot - INFO - covid19 command received
+2020-04-11 20:44:40,567 - Covid19 Bot - INFO - chart command received
+2020-04-11 21:12:07,342 - Covid19 Bot - INFO - chart command received
+2020-04-11 21:12:39,885 - Covid19 Bot - INFO - chart command received
+2020-04-11 21:13:07,944 - Covid19 Bot - INFO - chart command received
+2020-04-12 12:55:49,916 - Covid19 Bot - INFO - chart command received
+2020-04-12 12:56:23,097 - Covid19 Bot - INFO - chartDeaths command received
+2020-04-12 12:56:31,506 - Covid19 Bot - INFO - start command received
+2020-04-12 19:02:17,814 - Covid19 Bot - INFO - covid19 command received
+2020-04-12 19:02:26,008 - Covid19 Bot - INFO - chart command received
+2020-04-12 20:34:07,786 - Covid19 Bot - INFO - chart command received
+2020-04-13 11:56:31,738 - Covid19 Bot - INFO - chart command received
+2020-04-13 12:01:07,264 - Covid19 Bot - INFO - start command received
+2020-04-13 12:48:27,449 - Covid19 Bot - INFO - start command received
+2020-04-13 12:48:33,403 - Covid19 Bot - INFO - covid19 command received
+2020-04-13 16:41:19,590 - Covid19 Bot - INFO - chart command received
+2020-04-13 16:41:58,795 - Covid19 Bot - INFO - start command received
+2020-04-13 16:42:11,333 - Covid19 Bot - INFO - covid19 command received
+2020-04-13 16:42:47,134 - Covid19 Bot - INFO - chart command received
+2020-04-13 16:44:38,588 - Covid19 Bot - INFO - chartRecovered command received
+2020-04-13 17:32:22,930 - Covid19 Bot - INFO - chart command received
+2020-04-13 17:32:40,089 - Covid19 Bot - INFO - chart command received
+2020-04-13 22:31:36,682 - Covid19 Bot - INFO - start command received
+2020-04-13 22:32:04,939 - Covid19 Bot - INFO - covid19 command received
+2020-04-13 22:32:22,442 - Covid19 Bot - INFO - chart command received
+2020-04-13 22:33:02,034 - Covid19 Bot - INFO - covid19 command received
+2020-04-14 10:30:36,449 - Covid19 Bot - INFO - chart command received
+2020-04-14 12:55:37,622 - Covid19 Bot - INFO - chart command received
+2020-04-14 16:43:39,834 - Covid19 Bot - INFO - covid19 command received
+2020-04-14 16:43:47,336 - Covid19 Bot - INFO - covid19 command received
+2020-04-14 16:43:55,607 - Covid19 Bot - INFO - chart command received
+2020-04-14 16:44:25,633 - Covid19 Bot - INFO - chartRecovered command received
+2020-04-14 17:23:37,467 - Covid19 Bot - INFO - chart command received
+2020-04-14 17:23:58,090 - Covid19 Bot - INFO - chart command received
+2020-04-14 17:24:30,613 - Covid19 Bot - INFO - chart command received
+2020-04-14 18:55:43,532 - Covid19 Bot - INFO - start command received
+2020-04-15 10:32:39,471 - Covid19 Bot - INFO - chart command received
+2020-04-15 20:44:09,940 - Covid19 Bot - INFO - chart command received
+2020-04-15 21:25:04,830 - Covid19 Bot - INFO - start command received
+2020-04-15 21:25:20,924 - Covid19 Bot - INFO - covid19 command received
+2020-04-15 21:25:34,185 - Covid19 Bot - INFO - chart command received
+2020-04-15 21:28:59,776 - Covid19 Bot - INFO - chartConfirmed command received
+2020-04-15 21:52:12,761 - Covid19 Bot - INFO - chart command received
+2020-04-15 21:52:55,077 - Covid19 Bot - INFO - covid19 command received
+2020-04-15 21:53:40,822 - Covid19 Bot - INFO - chartRecovered command received
+2020-04-15 21:53:50,997 - Covid19 Bot - INFO - start command received
+2020-04-16 07:26:24,317 - Covid19 Bot - INFO - chart command received
+2020-04-16 10:02:39,388 - Covid19 Bot - INFO - chart command received
+2020-04-16 10:02:42,732 - Covid19 Bot - INFO - covid19 command received
+2020-04-16 17:40:57,071 - Covid19 Bot - INFO - chart command received
+2020-04-16 17:45:18,070 - Covid19 Bot - INFO - chart command received
+2020-04-17 00:19:01,207 - Covid19 Bot - INFO - chart command received
+2020-04-17 07:21:54,053 - Covid19 Bot - INFO - chart command received
+2020-04-17 11:24:25,677 - Covid19 Bot - INFO - covid19 command received
+2020-04-17 16:00:42,942 - Covid19 Bot - INFO - chart command received
+2020-04-17 16:03:23,049 - Covid19 Bot - INFO - covid19 command received
+2020-04-17 16:09:25,365 - Covid19 Bot - INFO - chartRecovered command received
+2020-04-17 16:09:52,824 - Covid19 Bot - INFO - chartConfirmed command received
+2020-04-18 14:36:11,535 - Covid19 Bot - INFO - chart command received
+2020-04-18 19:35:58,041 - Covid19 Bot - INFO - chart command received
+2020-04-18 19:35:58,205 - Covid19 Bot - ERROR - covid19 command fail for country: deutsch
+Traceback (most recent call last):
+  File "telegram_bot.py", line 99, in chart
+    multi_plt = make_multiple_barchart(country)
+  File "telegram_bot.py", line 71, in make_multiple_barchart
+    dates = [day['Date'] for day in days_dict]
+  File "telegram_bot.py", line 71, in <listcomp>
+    dates = [day['Date'] for day in days_dict]
+TypeError: string indices must be integers
+2020-04-18 19:36:01,069 - Covid19 Bot - INFO - chart command received
+2020-04-18 19:36:26,810 - Covid19 Bot - INFO - chart command received
+2020-04-18 19:37:04,500 - Covid19 Bot - INFO - covid19 command received
+2020-04-18 19:37:04,571 - Covid19 Bot - ERROR - covid19 command fail for country: germamy
+Traceback (most recent call last):
+  File "telegram_bot.py", line 48, in covid19
+    last_confirmeds = resp_confirmeds.json()[-1]
+KeyError: -1
+2020-04-18 19:37:08,506 - Covid19 Bot - INFO - covid19 command received
+2020-04-18 19:37:15,392 - Covid19 Bot - INFO - covid19 command received
+2020-04-18 20:00:37,892 - Covid19 Bot - INFO - covid19 command received
+2020-04-18 20:00:54,345 - Covid19 Bot - INFO - chart command received
