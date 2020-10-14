@@ -21,7 +21,7 @@ covid19 bot provides information about Covid19 pandemic.
 
 ## Images
 ![start](https://user-images.githubusercontent.com/46993394/95998692-68d86600-0e35-11eb-89d3-b0637102c3e8.png)
-<img src="https://user-images.githubusercontent.com/46993394/95998692-68d86600-0e35-11eb-89d3-b0637102c3e8.png" width="200" height="200">
+<img src="https://user-images.githubusercontent.com/46993394/95998692-68d86600-0e35-11eb-89d3-b0637102c3e8.png" width="250" height="400" display="block">
 ![covid19](https://user-images.githubusercontent.com/46993394/95998685-683fcf80-0e35-11eb-936b-97f6a956287b.png)
 ![chart](https://user-images.githubusercontent.com/46993394/95998694-68d86600-0e35-11eb-9d8b-633466eb93b2.jpg)
 ![chart_v2](https://user-images.githubusercontent.com/46993394/95998674-66760c00-0e35-11eb-9e69-26d3d0b2f6d2.png)
